@@ -1,0 +1,120 @@
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-size: 50px;
+    margin: 0 10%;
+    white-space: normal;
+}
+
+.side {
+    flex: 50%;
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 6%;
+}
+
+.main {
+    flex: 30%;
+    margin-right: 7%;
+}
+
+.informain {
+    position: relative;
+    padding: 20px 0;
+    color: black;
+}
+
+.dangky {
+    position: relative;
+    top: -20px;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.nhanhchong {
+    position: relative;
+    top: -40px;
+    font-size: 24px;
+    position: relative;
+}
+
+.email {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.hoten {
+    box-sizing: border-box;
+    width: 45%;
+    height: 40px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.hoten1 {
+    margin-right: 10%;
+}
+
+.password {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.formdangnhap {
+    position: relative;
+    top: -80px;
+}
+
+.ngaysinh {
+    position: relative;
+    top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: grey;
+}
+
+.ngay {
+    width: 0px;
+    font-size: 20px;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+
+#browsers {
+    position: relative;
+    font-size: 15px;
+    top: -10px;
+}
+
+#browsers option {
+    font-size: 15px;
+}
+
+.gender {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.d {
+    font-size: 12px;
+}
+
+.link {
+    position: relative;
+    left: 0px;
+}
+
+.nut {
+    font-weight: bold;
+    width: 200px;
+}
