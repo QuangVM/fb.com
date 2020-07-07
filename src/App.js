@@ -1,17 +1,15 @@
 import React from 'react';
-import Header from './components/Header';
+import { Switch, Route } from 'react-router-dom'
 import './App.scss';
-import Content from './components/Content';
-import Footer from './components/Footer';
+import Login from './components/Header';
+import HomePage from './components/customer/HomePage';
+import Logout from './components/Header';
 
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Content />
-      <Footer />
-    </div>
+    <Route exact path="/" component={Login} />
+
   );
 }
 
