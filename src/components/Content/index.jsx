@@ -1,7 +1,7 @@
 import React from 'react';
 import './Content.scss';
 import world from "./world.png";
-
+import HomePage from '../customer/HomePage';
 import {
     BrowserRouter as Router,
     Switch,
@@ -17,6 +17,7 @@ Content.propTypes = {
 const passRegex = RegExp(
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,10}$/
 );
+
 
 
 function Home() {
@@ -35,36 +36,16 @@ function Content(props) {
     return (
         <div>
             <Router>
-                <div>
-                    <nav>
-                        <ul>
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/about">About</Link>
-                            </li>
-                            <li>
-                                <Link to="/users">Users</Link>
-                            </li>
-                        </ul>
-                    </nav>
+                <Link to='/'>Home</Link>
+                <Link to='/customer/HomePage'>HomePage</Link>
+                <Link to='/Users'>Users</Link>
 
-                    {/* A <Switch> looks through its children <Route>s and
-                renders the first one that matches the current URL. */}
-                    <Switch>
-                        <Route path="/about">
-                            <About />
-                        </Route>
-                        <Route path="/users">
-                            <Users />
-                        </Route>
-                        <Route path="/">
-                            <Home />
-                        </Route>
-                    </Switch>
-                </div>
-            </Router>
+                <Switch>
+                    <Route path='/customer/HomePage'><HomePage /></Route>
+                    <Route path='/Users'><Users /></Route>
+                    <Route path='/'><Home /></Route>
+                </Switch>
+            </Router >
 
 
             <div class="content">

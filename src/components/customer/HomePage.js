@@ -4,7 +4,7 @@ import HomeLeft from './HomeLeft';
 import HomeRight from './HomeRight';
 import styled from 'styled-components';
 import { Component } from 'react'
-import { Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Redirect } from 'react-router-dom'
 import './HomePage.css';
 
 export default class HomePage extends Component {
@@ -22,7 +22,7 @@ export default class HomePage extends Component {
     }
     render() {
         if (this.state.loggedIn === false) {
-            return <Redirect to="/" />
+            return <Router><Redirect to="/" /></Router>
         }
         return (
             <div>
