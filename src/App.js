@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { Component, useCallback } from 'react';
+
+import HomePage from './pages/customer/HomePage';
 import { Switch, Route } from 'react-router-dom'
-import './App.scss';
-import Login from './components/Header';
-import HomePage from './components/customer/HomePage';
-import Logout from './components/Header';
-import Header from './components/Header';
-import Content from './components/Content'
+import Login from './screens/LoginScreen';
+import Logout from './screens/LoginScreen/Logout';
+import appRouters from './routers';
 
 function App() {
+  const renderRouter = useCallback(() =>
+    appRouters.map((router, index) => {
+      return (
+        <Route
+          key={index.toString()}
+          path={`${router.parentPath}${router.path}`}
+          component={router.component}
+          exact={router.exact === true}
+        />
+      );
+
+    }), []);
   return (
-    <>
-      <Login />
-    </>
+    <Switch>
+      {renderRouter()}
+    </Switch>
   );
 }
 
